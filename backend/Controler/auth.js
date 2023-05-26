@@ -6,7 +6,7 @@ module.exports.Register = async (req, res) => {
     const { Email, Password } = req.body;
     old = await users.findOne({ Email });
     if (old) {
-      return await res.status("409").json("already exists");
+      return await res.json("already exists");
     }
     newPassword = await bcrypt.hash(Password, 12);
     const newu = await users.create({ Email, Password: newPassword });
