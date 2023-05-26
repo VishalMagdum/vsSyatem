@@ -10,16 +10,16 @@ var RepoSchema = new mongoose.Schema({
   },
   User: {
     type: mongoose.Types.ObjectId,
-    ref:"User",
+    ref: "User",
     require: true,
   },
-  Collaborator:[
-    { 
-        type: mongoose.Schema.ObjectId,
-        ref: 'User',
-        default:null
+  Collaborator: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+      default: null
     }
-]
+  ]
 
 });
 
