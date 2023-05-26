@@ -15,13 +15,13 @@ module.exports.getUser = (req, res, next) => {
     const RefreshTokens = createjwts(re, "Refersh Key", "10m");
     res.cookie("AccessTokens", AccessTokens, {
       MaxAge: 60 * 10000,
-      sameSite: true,
+      sameSite: 'none',
       secure: true,
       httpOnly: true
     });
     res.cookie("RefreshTokens", RefreshTokens, {
       MaxAge: 60 * 600000,
-      sameSite: true,
+      sameSite: 'none',
       secure: true,
       httpOnly: true
     });
