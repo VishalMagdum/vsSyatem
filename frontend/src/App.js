@@ -17,7 +17,7 @@ import Loader from "./Loader"
 
 function App() {
   const cookie = cookie.get("AccessTokens")
-  console.log(cookie)
+  console.log("cookies",cookie)
 
   return (
     <Router>
