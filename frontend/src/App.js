@@ -16,6 +16,7 @@ import Home from './home'
 import Loader from "./Loader"
 
 function App() {
+  console.log("commit check")
   const cookie = cookie.get("AccessTokens")
   console.log("cookies",cookie)
 
