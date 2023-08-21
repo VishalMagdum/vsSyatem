@@ -16,6 +16,8 @@ import Home from './home'
 import Loader from "./Loader"
 
 function App() {
+  const cookie = cookie.get("AccessTokens")
+  console.log(cookie)
 
   return (
     <Router>
