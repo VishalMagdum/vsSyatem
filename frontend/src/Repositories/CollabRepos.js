@@ -3,7 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 export default function CollabRepos() {
   const [Repos, setRepos] = useState([])
-
+   const cookie = cookie.get("AccessTokens")
+  console.log(cookie)
   const navigate = useNavigate()
 
   useEffect(() => {
